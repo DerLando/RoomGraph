@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-
 using Grasshopper.Kernel;
-using Rhino.Geometry;
 using RoomGraphLibrary.Parsing;
 
 // In order to load the result of this wizard, you will also need to
@@ -10,9 +7,9 @@ using RoomGraphLibrary.Parsing;
 // folder in Grasshopper.
 // You can use the _GrasshopperDeveloperSettings Rhino command for that.
 
-namespace RoomGraph
+namespace RoomGraph.Components.Parsing
 {
-    public class RoomGraphComponent : GH_Component
+    public class ParseBuildingMarkdown : GH_Component
     {
         /// <summary>
         /// Each implementation of GH_Component must provide a public 
@@ -21,7 +18,7 @@ namespace RoomGraph
         /// Subcategory the panel. If you use non-existing tab or panel names, 
         /// new tabs/panels will automatically be created.
         /// </summary>
-        public RoomGraphComponent()
+        public ParseBuildingMarkdown()
           : base("ParseBuildingMarkdown", "ParseMD",
               "Parses a building markdown file",
               Settings.MAIN_CATEGORY, Settings.SUB_CATEGORY_PARSING)
@@ -82,7 +79,7 @@ namespace RoomGraph
         /// </summary>
         public override Guid ComponentGuid
         {
-            get { return new Guid("4d915c2e-23bf-4f0d-a8bc-7677960961f9"); }
+            get { return new Guid("F3956648-CC0A-4343-AC97-19E8A8E2A3E8"); }
         }
     }
 }

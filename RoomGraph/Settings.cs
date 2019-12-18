@@ -10,5 +10,6 @@ namespace RoomGraph
     {
         public static string MAIN_CATEGORY = "RoomGraph";
         public static string SUB_CATEGORY_PARSING = "Parsing";
+        public static string SUB_CATEGORY_EXPLODE = "Explode";
     }
 }
