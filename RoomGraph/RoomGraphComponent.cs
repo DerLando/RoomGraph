@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using Grasshopper.Kernel;
 using Rhino.Geometry;
+using RoomGraphLibrary.Parsing;
 
 // In order to load the result of this wizard, you will also need to
 // add the output bin/ folder of this project to the list of loaded
@@ -21,9 +22,9 @@ namespace RoomGraph
         /// new tabs/panels will automatically be created.
         /// </summary>
         public RoomGraphComponent()
-          : base("RoomGraph", "Nickname",
-              "Description",
-              "Category", "Subcategory")
+          : base("ParseBuildingMarkdown", "ParseMD",
+              "Parses a building markdown file",
+              Settings.MAIN_CATEGORY, Settings.SUB_CATEGORY_PARSING)
         {
         }
 
@@ -32,6 +33,7 @@ namespace RoomGraph
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
+            pManager.AddTextParameter("Path", "P", "Path to Markdown file", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -39,6 +41,7 @@ namespace RoomGraph
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
+            pManager.AddGenericParameter("Building", "B", "Parsed building", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -48,6 +51,14 @@ namespace RoomGraph
         /// to store data in output parameters.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
+            string path = "";
+
+            if (!DA.GetData("Path", ref path)) return;
+
+            var building = MarkdownParser.ParseRoomListToBuilding(path);
+            if (building.Count == 0) return;
+
+            DA.SetData("Building", building);
         }
 
         /// <summary>
