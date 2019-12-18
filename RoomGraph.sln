@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomGraph", "RoomGraph\RoomGraph.csproj", "{7DF0F67C-F463-4640-B996-1A56AB3F6547}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomGraphLibrary", "RoomGraphLibrary\RoomGraphLibrary.csproj", "{A679F7E1-F127-477C-A5F7-D19BF92334C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomGraph.Tests", "RoomGraph.Tests\RoomGraph.Tests.csproj", "{C30E20DC-CC6A-4E33-B7BB-80532C3FECEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7DF0F67C-F463-4640-B996-1A56AB3F6547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DF0F67C-F463-4640-B996-1A56AB3F6547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DF0F67C-F463-4640-B996-1A56AB3F6547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A679F7E1-F127-477C-A5F7-D19BF92334C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A679F7E1-F127-477C-A5F7-D19BF92334C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A679F7E1-F127-477C-A5F7-D19BF92334C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A679F7E1-F127-477C-A5F7-D19BF92334C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30E20DC-CC6A-4E33-B7BB-80532C3FECEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30E20DC-CC6A-4E33-B7BB-80532C3FECEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30E20DC-CC6A-4E33-B7BB-80532C3FECEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30E20DC-CC6A-4E33-B7BB-80532C3FECEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
